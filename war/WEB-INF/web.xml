@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<servlet>
+		<servlet-name>Fetch</servlet-name>
+		<servlet-class>de.kaffeefy.server.cron.Fetch</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Fetch</servlet-name>
+		<url-pattern>/cron/fetch</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CleanUpCron</servlet-name>
+		<servlet-class>de.kaffeefy.server.cron.CleanUp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CleanUpCron</servlet-name>
+		<url-pattern>/cron/cleanup</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CleanUpTask</servlet-name>
+		<servlet-class>de.kaffeefy.server.task.CleanUpWorker</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CleanUpTask</servlet-name>
+		<url-pattern>/task/cleanup</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Page</servlet-name>
+		<servlet-class>de.kaffeefy.server.Page</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Page</servlet-name>
+		<url-pattern>/page</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Feed</servlet-name>
+		<servlet-class>de.kaffeefy.server.Feed</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Feed</servlet-name>
+		<url-pattern>/feed</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>page</welcome-file>
+	</welcome-file-list>
+	
+	
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/cron/*</url-pattern>
+      <url-pattern>/task/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>	
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+</web-app>

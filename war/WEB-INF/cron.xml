@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/cron/cleanup</url>
+    <description>Clean up DS</description>
+    <schedule>every 24 hours</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=motorsport-total</url>
+    <description>Fetch Motorsport Total F1</description>
+    <schedule>every 30 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=heise-online</url>
+    <description>Fetch Heise Online</description>
+    <schedule>every 20 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=serienjunkies-de</url>
+    <description>Fetch serienjunkies.de</description>
+    <schedule>every 30 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=garfield</url>
+    <description>Fetch Garfield</description>
+    <schedule>every 1 hours</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-politik</url>
+    <description>Fetch SZ Politik</description>
+    <schedule>every 15 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-reise</url>
+    <description>Fetch SZ Reise</description>
+    <schedule>every 27 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-geld</url>
+    <description>Fetch SZ Geld</description>
+    <schedule>every 19 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-karriere</url>
+    <description>Fetch SZ Karriere</description>
+    <schedule>every 28 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-kultur</url>
+    <description>Fetch SZ Kultur</description>
+    <schedule>every 29 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-digital</url>
+    <description>Fetch SZ Digital</description>
+    <schedule>every 18 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-wissen</url>
+    <description>Fetch SZ Wissen</description>
+    <schedule>every 17 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/cron/fetch?feed=sz-wirtschaft</url>
+    <description>Fetch SZ Wirtschaft</description>
+    <schedule>every 16 minutes</schedule>
+  </cron>
+</cronentries>
