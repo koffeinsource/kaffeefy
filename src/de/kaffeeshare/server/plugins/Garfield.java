@@ -14,7 +14,8 @@ public class Garfield extends BasePlugin {
 
 	@Override
 	public boolean match(String url) {
-		return url.contains("http://www.gocomics.com//garfield");
+		return url.startsWith("http://feedproxy.google.com/~r/uclick/garfield/")
+				|| url.contains("http://www.gocomics.com//garfield");
 	}
 
 	@Override
