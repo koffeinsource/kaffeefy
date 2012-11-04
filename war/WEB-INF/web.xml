@@ -71,4 +71,8 @@
   <servlet-name>SystemServiceServlet</servlet-name>
   <url-pattern>/_ah/spi/*</url-pattern>
  </servlet-mapping>
+ 
+ <system-properties>
+   <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+ </system-properties> 
 </web-app>
